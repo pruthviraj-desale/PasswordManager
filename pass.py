@@ -7,8 +7,10 @@ import argparse
 def generate_key():
     if not os.path.exists(".secret.key"):
         key = Fernet.generate_key()
+        print(key.decode())
         with open(".secret.key", "wb") as key_file:
             key_file.write(key)
+     
 
 m_master_password = "12345"
 
