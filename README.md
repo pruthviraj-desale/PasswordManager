@@ -20,6 +20,7 @@ Here’s the text you can add to your README file to explain how the command wor
 ## Usage
 
 To run the password manager, navigate to the directory where your script is located and use the following command:
+The first time you run the add command, you will also be provided a key that you need with the other master password that is hard coded in the python file(12345), to later on access your passwords, delete them or update them.
 
 ```bash
 python password_manager.py <command> [--options]
