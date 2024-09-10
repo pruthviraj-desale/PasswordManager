@@ -7,7 +7,7 @@ import argparse
 def generate_key():
     if not os.path.exists(".secret.key"):
         key = Fernet.generate_key()
-        print(key.decode())
+        print(f"this is your generated passkey, save it to access the files later: {key.decode()}")
         with open(".secret.key", "wb") as key_file:
             key_file.write(key)
      
