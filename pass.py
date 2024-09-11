@@ -60,7 +60,8 @@ def view_details():
     data = load_file()
     if authenticate():
         for account, details in data.items():
-            print(f"Account: {account}, Username: {details['username']}, Password: ********")
+            decrypted_password = decrypt_key(details['password'])
+            print(f"Account: {account}, Username: {details['username']}, Password: {decrypted_password}")
     else:
         print("Your authorization has failed!")
 
